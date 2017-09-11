@@ -1,0 +1,13 @@
+    zoom = 2;           % The desired zoom factor
+    numFrames = 16;     % Number of low-resolution (LR) frames
+    noiseStd = 0.05;   % Standard deviation of simulated Gaussain noise
+    % Initilaize static imaging parameters (PSF and image dimensions)
+    imagingParams.hrDim = [dimY; dimX];
+    imagingParams.lrDim = round(1/zoom*[dimY; dimX]);
+    imagingParams.psfWidth = 0.4;
+    % Set bounds for motions. Translation and rotation angles are set to
+    % values between upper and lower bound.
+    motionLowerBound.rotAngle = -1.25;
+    motionLowerBound.translation = [-4; -4];
+    motionUpperBound.rotAngle = 1.25;
+    motionUpperBound.translation = [4; 4];
