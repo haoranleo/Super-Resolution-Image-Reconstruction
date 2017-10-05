@@ -1,0 +1,1 @@
+Data used for calculating
